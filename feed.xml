@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-02T22:32:41-07:00</updated><id>http://localhost:4000/</id><title type="html">cygnyx</title><subtitle>Cygnyx is a contraction of CYGnus and oNYX.
+</subtitle><entry><title type="html">Using Jekyll to Deploy to GitHub</title><link href="http://localhost:4000/2017/05/02/Using-Jekyll-to-Deploy-to-GitHub.html" rel="alternate" type="text/html" title="Using Jekyll to Deploy to GitHub" /><published>2017-05-02T00:00:00-07:00</published><updated>2017-05-02T00:00:00-07:00</updated><id>http://localhost:4000/2017/05/02/Using-Jekyll-to-Deploy-to-GitHub</id><content type="html" xml:base="http://localhost:4000/2017/05/02/Using-Jekyll-to-Deploy-to-GitHub.html">&lt;h1 id=&quot;deploying-my-site-on-github-using-jekyll&quot;&gt;Deploying my site on GitHub using Jekyll.&lt;/h1&gt;
+
+&lt;p&gt;I’ve tried a few static site builder with &lt;a href=&quot;http://github.com&quot;&gt;GitHub&lt;/a&gt; pages, such as
+&lt;a href=&quot;http://brunch.io&quot;&gt;brunch&lt;/a&gt; and &lt;a href=&quot;http://metalsmith.io&quot;&gt;Metalsmith&lt;/a&gt;.
+Since &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is popular and is recommended for GitHub,
+I’ve decided to give it a try.&lt;/p&gt;
+
+&lt;p&gt;There are several guides on how to deploy a Jekyll site on GitHub,
+but none seem to do what I want.
+I’d like to keep my site’s source code off of GitHub.
+So I only need to deploy the _site subdirectory to the master branch.&lt;/p&gt;
+
+&lt;p&gt;Before deploying I used &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; to adjust some of the source files.
+In particular I wanted to include &lt;a href=&quot;https://www.mathjax.org&quot;&gt;MathJax&lt;/a&gt; in order to write
+equations on my site, such as: \(x \lt y \), which is written as &lt;code class=&quot;highlighter-rouge&quot;&gt;\\(x \lt y \\)&lt;/code&gt;.
+The whole process was easy to use.
+It updates to the local webserver, port 4000, whenever a source file changes.&lt;/p&gt;
+
+&lt;p&gt;For MathJax I modified the head.html file to include:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &amp;lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&amp;gt;
+  &amp;lt;/script&amp;gt;
+  &amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+    MathJax.Hub.Config({
+      showProcessingMessages: false,
+      tex2jax: { inlineMath: [['\\(','\\)']] },
+      TeX: { equationNumbers: {autoNumber: &quot;AMS&quot;} }
+    });
+  &amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Which restricts the inline math equation delimiters to avoid conflicts with &lt;a href=&quot;https://en.wikipedia.org/wiki/Markdown&quot;&gt;markdown&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I learn enough about Liquid to build a &lt;code class=&quot;highlighter-rouge&quot;&gt;tags&lt;/code&gt; page to organize posts according to their tags.&lt;/p&gt;
+
+&lt;p&gt;I did a &lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; for the &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; subdirectory.
+Followed by &lt;code class=&quot;highlighter-rouge&quot;&gt;git add .&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;It seems that the &lt;code class=&quot;highlighter-rouge&quot;&gt;.git&lt;/code&gt; subdirectory is ignored by Jekyll.&lt;/p&gt;</content><author><name></name></author><category term="github" /><category term="jekyll" /><summary type="html">Deploying my site on GitHub using Jekyll.</summary></entry></feed>
