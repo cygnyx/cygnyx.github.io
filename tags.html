@@ -1,0 +1,45 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<div class="home">
+  <h1 class="post-title">Tags</h1>
+
+  <p class="post-meta" style="text-align: justify;">
+    {% assign tags = site.tags | sort %}
+
+    {% assign tag_count = 0 %}
+    {% for taginfo in tags %}
+      {% assign tag = taginfo | first %}
+      {% assign tag_count = tag_count | plus: site.tags[tag].size %}
+    {% endfor %}
+
+    {% for taginfo in tags %}
+      {% assign tag = taginfo | first %}
+      {% assign rel_tag_size = site.tags[tag].size | times: 3.0 | divided_by: tag_count | plus: 1 %}
+      <span style="white-space: nowrap; font-size: {{ rel_tag_size }}em;">
+	<a href="#{{ tag | slugize }}">{{ tag | slugize }}</a></span>
+      <span style="white-space: nowrap; padding: 0.6em;">({{ site.tags[tag].size }})</span>
+    {% endfor %}
+  </p>
+  <hr>
+  {% for taginfo in tags %}
+    {% assign tag = taginfo | first %}
+    <h2>{{ tag | slugize }}</h2>
+    <ul class="posts">
+      {% for post in site.posts %}
+        {% if post.tags contains tag %}
+            <li class="post_info"><a href="{{ post.url }}">{{ post.title }}</a>
+              <br><span>{{ post.date | date:"%Y-%m-%d" }}
+		{% for t in post.tags %}
+		  {{ t }}
+		{% endfor %}
+	      </span>
+            </li>
+	{% endif %}
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>
