@@ -21,7 +21,8 @@ permalink: /tags/
       {% assign rel_tag_size = site.tags[tag].size | times: 3.0 | divided_by: tag_count | plus: 1 %}
       <span style="white-space: nowrap; font-size: {{ rel_tag_size }}em;">
 	<a href="#{{ tag | slugize }}">{{ tag | slugize }}</a></span>
-      <span style="white-space: nowrap; padding: 0.6em;">({{ site.tags[tag].size }})</span>
+      <span style="white-space: nowrap;">({{ site.tags[tag].size }})</span>
+      <span style="white-space: nowrap; padding: 0.6em;"></span>
     {% endfor %}
   </p>
   <hr>
