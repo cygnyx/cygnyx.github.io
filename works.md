@@ -4,6 +4,8 @@ title: Works
 permalink: /works/
 ---
 
+A collection of public works that I've contributed to.
+
 ## Software
 
 ### EUVE Guest Observer Analysis Software
