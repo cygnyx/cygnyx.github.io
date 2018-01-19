@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "CFA FinTech Machine Learning Talk"
-tags: cfa
+tags: cfa finance
 ---
 
 Sanjiv Ranjan Das [srdas] spoke on the use of machine learning and other artifical intelligence techniques in financial services.
