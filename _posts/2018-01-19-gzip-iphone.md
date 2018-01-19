@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "gzip on the iphone""
-tags: software iphone
+title:  "gzip on the iphone"
+tags: development gzip iphone
 ---
 
 Before sending out some data from the iphone, I wanted to compress it in a well known format.
@@ -66,7 +66,7 @@ The `strm` structure is configured to read all of the bytes in the NSData.
 The call to `deflateInit2` configures the compression to be `gzip` compatiable.
 The loop resizes the output buffer as necessary.
 The terminating condition is a bit subtle and could be improved.
-The loop will exit if deflate has a problem or the output buffer has spare capacity
+The loop will exit if deflate has a problem or the output buffer has spare capacity.
 The subtle aspect is if both conditions are false: is the compress complete when the input buffer is completely read but and error occured?
 I carefully copy out elements of the `strm` structure before calling `deflateEnd`.
 
@@ -74,7 +74,8 @@ I carefully copy out elements of the `strm` structure before calling `deflateEnd
 `Z_DEFLATED` is required, `(15+16)` is the `windowBits`, `8` is the default value for the amount of memory to use,
 and `Z_DEFAULT_STRATEGY` uses a default value for the compression strategy.
 `windowBits` is the log base 2 of the historical window size: 15 indicates a 32K window size.
-Negative values are permitted too where the negative sign flags that a raw stream (lacking a header or check value).
+Negative values are permitted too where the negative sign flags that a raw stream
+(lacking a header or check value) should be generated.
 Adding 16 to the value flags that a `gzip` header and check value should be used.
 
 [zlib]: http://zlib.net
