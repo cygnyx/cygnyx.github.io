@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using GitHub"
+title:  "Reducing GitHub commits"
 tags: github jekyll
 ---
 

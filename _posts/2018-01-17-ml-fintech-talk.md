@@ -5,6 +5,7 @@ tags: cfa finance
 ---
 
 Sanjiv Ranjan Das [srdas] spoke on the use of machine learning and other artifical intelligence techniques in financial services.
+
 His presentation used [slideshare.net].
 He recommended 2 of his online books: [MLBook] and [DLBook].
 He was very excited about machine learning techniques.
