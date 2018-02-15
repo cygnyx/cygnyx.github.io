@@ -28,7 +28,7 @@ permalink: /tags/
   <hr>
   {% for taginfo in tags %}
     {% assign tag = taginfo | first %}
-    <h2><a href="{{ tag | slugize }}">{{ tag | slugize }}</a></h2>
+    <h2><a id="{{ tag | slugize }}">{{ tag | slugize }}</a></h2>
     <ul class="posts">
       {% for post in site.posts %}
         {% if post.tags contains tag %}
