@@ -5,6 +5,7 @@ tags: github jekyll
 ---
 
 My local installation of `bundle` and `jekyll` became corrupted.
+
 I reinstalled both to fix the problem.
 The prior versions of these scripts had a hardcoded path to the `ruby` interpreter.
 The current versions use `/usr/bin/env ruby` instead.
