@@ -1,6 +1,6 @@
 Rebuild site on github:
 
-git add .; git commit -m again; git push
+git add .; git commit -m updated; git push
 
 Rebuild site locally:
 
