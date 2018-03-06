@@ -68,6 +68,13 @@ Surprisingly this work is on the first page of the Google search for
 and is first for
 [EUVE Satellite Communication Simulation](https://www.google.com/search?q=euve+satellite+communication+simulation)
 
+### Triangulation Applet
+
+This [Triangulation](http://www.cygnyx.com/Triangulation/) applet uses Java in the browser to build interactive,
+as well as static diagrams, of Delaunay Triangulations.
+Due to security concerns, some adjustments to the browser may be needed before this page will display properly.
+
+
 ### markover.js
 
 I wrote [markover](http://cygnyx.github.io/markover.js)
