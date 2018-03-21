@@ -21,6 +21,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://cygnyx.com" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  cygnyx
+rss: RSS
 google_analytics: UA-97044054-1
 # Build settings
 markdown: kramdown
