@@ -10,6 +10,9 @@
       </div>
 
       <div class="footer-col footer-col-2">
+        {% if site.github_username %}
+          {% include icon-github.html username=site.github_username %}
+        {% endif %}
       </div>
 
       <div class="footer-col footer-col-3">
