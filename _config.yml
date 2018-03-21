@@ -16,7 +16,7 @@
 title: cygnyx
 email: services@cygnyx.com
 description: > # this means to ignore newlines until "baseurl:"
-  Cygnyx is a contraction of CYGnus and oNYX.
+  cygnyx is a contraction of CYGnus and oNYX.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://cygnyx.com" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
