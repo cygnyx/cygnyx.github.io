@@ -2,6 +2,20 @@
 
   <div class="wrapper">
 
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        {% if site.email %}
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        {% endif %}
+      </div>
+
+      <div class="footer-col footer-col-2">
+      </div>
+
+      <div class="footer-col footer-col-3">
+	<p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+      </div>
+    </div>
 
   </div>
 
