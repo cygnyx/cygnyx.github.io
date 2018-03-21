@@ -90,7 +90,7 @@ Awkward development issues can be discussed in-situ as well as links to useful r
 
 I wrote [pry](http://cygnyx.github.io/pry)
 ([github](http://github.com/cygnyx/pry), [npmjs](https://www.npmjs.com/package/pry),
-[Cloudant](https://cygnyx.cloudant.com/example/_design/pry/_show/README.html))
+[Cloudant](https://83f89ceb-4193-4882-8709-878593c306e9-bluemix:18b38eec9880e5547524442200f011dcfcd1d1f787a358de6961ca1f24af300a@83f89ceb-4193-4882-8709-878593c306e9-bluemix.cloudant.com/example/_design/pry/_show/README.html))
 in 2015.
 It is a self-replicating [Couchapp](https://couchapp.readthedocs.io/en/latest/) deployment tool based in part on `markdown.js`.
 A live deployment of `pry` is located on `Cloudant` featuring its online editor.
