@@ -32,14 +32,14 @@ permalink: /tags/
     <ul class="posts">
       {% for post in site.posts %}
         {% if post.tags contains tag %}
-            <li class="post_info"><a href="{{ post.url }}">{{ post.title }}</a>
-              <br><span>{{ post.date | date:"%Y-%m-%d" }}
+            <p class="post_info"><a href="{{ post.url }}">{{ post.title }}</a>
+              <span>{{ post.date | date:"%Y-%m-%d" }}
 		{% for t in post.tags %}
 		  {{ t }}
 		{% endfor %}
 	      </span>
               <br>{{ post.excerpt | strip_html }}
-            </li>
+            </p>
 	{% endif %}
       {% endfor %}
     </ul>
