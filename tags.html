@@ -38,6 +38,7 @@ permalink: /tags/
 		  {{ t }}
 		{% endfor %}
 	      </span>
+              <br>{{ post.excerpt | strip_html }}
             </li>
 	{% endif %}
       {% endfor %}
