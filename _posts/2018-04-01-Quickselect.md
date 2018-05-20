@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Quickselect Performance"
-tags: quick select algorithm
+tags: quick select algorithms
 ---
 Turns out that `select` is much faster than `sort` algorithms for calculating the median of a
 data set.
