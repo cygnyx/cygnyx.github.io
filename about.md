@@ -22,8 +22,7 @@ But there are also unknown unknowns – the ones we don't know we don't know.
 And if one looks throughout the history of our country and other free countries,
 it is the latter category that tend to be the difficult ones.
 
-- Secretary of Defense, Donald Rumsfeld on 2 February 2002
-
+-- Secretary of Defense, Donald Rumsfeld on 2 February 2002
 
 # Implementation
 
