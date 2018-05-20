@@ -33,7 +33,7 @@ permalink: /tags/
       {% for post in site.posts %}
         {% if post.tags contains tag %}
             <p class="post_info"><a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date:"%Y-%m-%d" }}
-              <span style="color:blue; font-style: italic">
+              <span style="font-style: italic; font-size: -3">
 		{% for t in post.tags %}
 		  {{ t }}
 		{% endfor %}
