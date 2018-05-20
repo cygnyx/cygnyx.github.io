@@ -4,9 +4,10 @@ title: About
 permalink: /about/
 ---
 
-# Cygnyx
+# cygnyx
 
-Cygnyx is a contraction of Cygnus and Onyx.
+cygnyx is a contraction of CYGnus and oNYX.
+
 In finance the black swan [meme](https://en.wikipedia.org/wiki/Meme)
 is a metaphor for inappropriate generalizations.
 This metaphor has broken down a little with the widespread knowledge of
@@ -21,7 +22,7 @@ Cygnyx is a reminder that there are many unknowns.
 > But there are also unknown unknowns – the ones we don't know we don't know.
 > And if one looks throughout the history of our country and other free countries,
 > it is the latter category that tend to be the difficult ones.
->> __Secretary of Defense, Donald Rumsfeld on 2 February 2002__
+>> Donald Rumsfeld, Secretary of Defense, 2 February 2002
 
 # Implementation
 

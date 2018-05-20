@@ -25,7 +25,7 @@ permalink: /tags/
       <span style="white-space: nowrap; padding: 0.6em;"></span>
     {% endfor %}
   </p>
-  <hr>
+  <p><hr></p>
   {% for taginfo in tags %}
     {% assign tag = taginfo | first %}
     <h2><a id="{{ tag | slugize }}">{{ tag | slugize }}</a></h2>
