@@ -11,7 +11,7 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       <span style="font-style: italic; font-size: smaller">
-        {% for t in post.tags %}
+        {% for t in page.tags %}
           <a href="/tags/#{{ t }}">{{ t }}</a>
         {% endfor %}
       </span>
