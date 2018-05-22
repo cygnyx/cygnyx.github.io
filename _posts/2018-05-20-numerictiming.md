@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Numeric Calculation Timing"
-tags: python timing
+tags: python numpy numexpr timing
 ---
 Comparison of python, numpy and numexpr performance.
 
