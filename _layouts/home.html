@@ -10,7 +10,11 @@ layout: default
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
+        <span style="font-style: italic; font-size: smaller">
+	  {% for t in post.tags %}
+            <a href="/tags/#{{ t }}">{{ t }}</a>
+	  {% endfor %}
+        </span>
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
