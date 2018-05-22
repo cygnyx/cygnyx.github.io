@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Noise and Batch Size in Linear Regression"
-tags: tensorflow
+tags: tensorflow timing
 ---
 Using a linear regression, I find that a batch size of 32 or larger
 works best in tensorflow.
