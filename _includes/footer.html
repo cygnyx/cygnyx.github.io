@@ -44,10 +44,8 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <ul>
-          <li>{{- site.description | escape -}}</li>
-          <li id="loaded"></li>
-        </ul>
+        <p>{{- site.description | escape -}}</p>
+        <p id="loaded"></p>
 <script>
 function loadedin() {
   window.performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {};
