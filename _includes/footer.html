@@ -45,7 +45,20 @@
 
       <div class="footer-col footer-col-3">
         <p>{{- site.description | escape -}}</p>
-        <p class="loaded"></p>
+        <p id="loaded"></p>
+<script>
+function loadedin() {
+  window.performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {};
+  var t = performance.timing || {};
+  if (!t)
+    return;
+
+  var start = t.navigationStart, finish = t.loadEventEnd;
+  document.getElementsById('loaded').innerText = "Loaded in " + ((finish - start) / 1000) + " seconds.";
+}
+
+window.onload = function(){ setTimeout(loadedin, 0); }
+</script>
       </div>
     </div>
 
