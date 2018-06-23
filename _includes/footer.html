@@ -54,7 +54,7 @@ function loadedin() {
     return;
 
   var start = t.navigationStart, finish = t.loadEventEnd;
-  document.getElementsById('loaded').innerText = "Loaded in " + ((finish - start) / 1000) + " seconds.";
+  document.getElementById('loaded').innerText = "Loaded in " + ((finish - start) / 1000) + " seconds.";
 }
 
 window.onload = function(){ setTimeout(loadedin, 0); }
