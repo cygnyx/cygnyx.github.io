@@ -11,6 +11,8 @@ that implements qppenalty in python, C, java and javascript.
 It is
 available [here](/notebooks/qppenalty.ipynb)
 or viewed [online](https://github.com/cygnyx/cygnyx.github.io/blob/master/notebooks/qppenalty.ipynb) at GitHub.
+This is a large notebook, so you may need to __Reload__ when viewing online.
+
 The approach converts the constrained quadratic programming problem
 into an unconstrained problem that approximates the solution.
 The notebook reviews the mathematics that drives the algorithm,
