@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "qppenalty"
-tags: algorithms, QP, python, C, java, javascript
+tags: algorithms QP python C java javascript
 ---
 This notebook implements qppenalty a program that
 solves quadratic programming problems.
