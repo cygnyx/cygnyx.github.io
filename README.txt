@@ -1,4 +1,4 @@
-Rebuild site on github:
+Rebuild site on github: If password problem, try outside of emacs
 
 git add .; git commit -m updated; git push
 
