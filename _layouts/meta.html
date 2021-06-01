@@ -5,6 +5,24 @@ layout: default
     {{ content }}
   </div>
   <h1 class="post-title p-name" itemprop="name headline">Site Environment</h1>
-    {%- for item in site -%}
+    {%- assign items = "title,email,description,url,github_username,theme,markdown,highlighter,peach" | split: ',' -%}
+    {%- for item in items -%}
       <p><span style="bold">{{ item }}:</span><p>{{ site[item] }}</p>
+    {%- endfor -%}
+  <h2 class="post-title p-name" itemprop="name headline">GitHub Environment</h1>
+    {%- assign items = "baseurl,build_revision,language,pages_hostname,project_tagline,project_title,repository_name,repository_url,url," | split: ',' -%}
+    {%- for item in items -%}
+      <p><span style="bold">{{ item }}:</span><p>{{ site.github[item] }}</p>
+    {%- endfor -%}
+  <h2 class="post-title p-name" itemprop="name headline">Contributors Environment</h1>
+    {%- for item in site.github.contributors -%}
+      <p><span style="bold">{{ item }}:</span><p>{{ site.github.contributors[item] }}</p>
+    {%- endfor -%}
+  <h2 class="post-title p-name" itemprop="name headline">Owner Environment</h1>
+    {%- for item in site.github.owner -%}
+      <p><span style="bold">{{ item }}:</span><p>{{ site.github.owner[item] }}</p>
+    {%- endfor -%}
+  <h2 class="post-title p-name" itemprop="name headline">Versions Environment</h1>
+    {%- for item in site.github.versions -%}
+      <p><span style="bold">{{ item }}:</span><p>{{ site.github.versions[item] }}</p>
     {%- endfor -%}
