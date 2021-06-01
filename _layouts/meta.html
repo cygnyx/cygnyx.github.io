@@ -16,7 +16,7 @@ layout: default
     {%- endfor -%}
   <h2 class="post-title p-name" itemprop="name headline">Contributors Environment</h1>
     {%- for item in site.github.contributors -%}
-      <div class="post-content e-content" itemprop="articleBody"><span style="font-weight:bold">{{ item[0] }}: </span><span>{{ item[1] }}</span></div>
+      <div class="post-content e-content" itemprop="articleBody"><span style="font-weight:bold">{{ item }}: </span><span>{{ item[1] }}</span></div>
     {%- endfor -%}
   <h2 class="post-title p-name" itemprop="name headline">Owner Environment</h1>
     {%- for item in site.github.owner -%}
