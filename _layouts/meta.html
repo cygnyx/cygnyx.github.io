@@ -7,25 +7,24 @@ layout: default
   <h1 class="post-title p-name" itemprop="name headline">Site Environment</h1>
     {%- assign items = "title,email,description,url,github_username,theme,markdown,highlighter,peach" | split: ',' -%}
     {%- for item in items -%}
-      <div class="post-content e-content" itemprop="articleBody"><span style="bold">{{ item }}:</span><span>{{ site[item] }}</span></div>
+      <div class="post-content e-content" itemprop="articleBody"><span style="font-weight:bold">{{ item }}: </span><span>{{ site[item] }}</span></div>
     {%- endfor -%}
   <h2 class="post-title p-name" itemprop="name headline">GitHub Environment</h1>
     {%- assign items = "baseurl,build_revision,language,pages_hostname,project_tagline,project_title,repository_name,repository_url,url," | split: ',' -%}
     {%- for item in items -%}
-      <div class="post-content e-content" itemprop="articleBody"><span style="bold">{{ item }}:</span><span>{{ site.github[item] }}<//span></div>
+      <div class="post-content e-content" itemprop="articleBody"><span style="font-weight:bold">{{ item }}: </span><span>{{ site.github[item] }}<//span></div>
     {%- endfor -%}
   <h2 class="post-title p-name" itemprop="name headline">Contributors Environment</h1>
     {%- for cont in site.github.contributors -%}
-    {%- assign items = site.github.contributors[cont] -%}
-     {%- for item in items -%}
-      <div class="post-content e-content" itemprop="articleBody"><span style="bold">{{ item }}:</span><span>{{ items[item] }}</span></div>
+     {%- for item in site.github.contributors[cont] -%}
+      <div class="post-content e-content" itemprop="articleBody"><span style="font-weight:bold">{{ item[0] }}: </span><span>{{ item[1] }}</span></div>
      {%- endfor -%}
     {%- endfor -%}
   <h2 class="post-title p-name" itemprop="name headline">Owner Environment</h1>
     {%- for item in site.github.owner -%}
-      <div class="post-content e-content" itemprop="articleBody"><span style="bold">{{ item }}:</span><span>{{ site.github.owner[item] }}<//span></div>
+      <div class="post-content e-content" itemprop="articleBody"><span style="font-weight:bold">{{ item[0] }}: </span><span>{{ item[1]] }}<//span></div>
     {%- endfor -%}
   <h2 class="post-title p-name" itemprop="name headline">Versions Environment</h1>
     {%- for item in site.github.versions -%}
-      <div class="post-content e-content" itemprop="articleBody"><span style="bold">{{ item }}:</span><span>{{ site.github.versions[item] }}<//span></div>
+      <div class="post-content e-content" itemprop="articleBody"><span style="font-weight:bold">{{ item[0] }}: </span><span>{{ item[1] }}<//span></div>
     {%- endfor -%}
