@@ -1,1 +1,1 @@
-The cygnyx website.
+[The cygnyx website.](http://cygnyx.github.io/)
