@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: cygnyx
-email: services@cygnyx.com
+#email: services@cygnyx.com
 description: > # this means to ignore newlines until "baseurl:"
   cygnyx is a contraction of CYGnus and oNYX.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -22,7 +22,7 @@ url: "http://cygnyx.github.io" # the base hostname & protocol for your site, e.g
 #twitter_username: jekyllrb
 github_username:  cygnyx
 rss: RSS
-google_analytics: UA-97044054-1
+#google_analytics: UA-97044054-1
 # Build settings
 markdown: kramdown
 theme: minima
