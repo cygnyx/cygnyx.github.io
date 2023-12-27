@@ -7,7 +7,6 @@ u = (s) => s.substring(1, s.length-1),
 s = (a) => a.length > 1 ? ('[' + a.join(',') + ']') : a[0],
 c = (k, v) => d + k + d + ':' + v,
 i = (c, t, f) => c ? t : f;
-
 if (n == null)
 r = '{' + c('PAGE', '{' + [c('VERSION',1),c('URL', q(location.href)), c('TIME', Date.now()),
 u(b(document.head)), u(b(document.body))].join(',') + '}') + '}';
