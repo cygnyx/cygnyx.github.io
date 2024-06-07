@@ -29,21 +29,38 @@ layout: null
   var c = null;
   var cnt = 0;
   var error = null;
+  var errorcnt = 0;
   var tracking = null;
 
   function pos(p) {
+      if (tracking == null)
+	  return;
       c = p.coords;
+      cnt = cnt + 1;
       drawpage();
   }
 
+  function seterror(sec, txt) {
+      error = txt;
+      errorcnt = sec;
+  }
+
   function err(ec) {
-      error = ec;
+      seterror(5, ec);
       drawpage();
   }
 
   function updateposition() {
-      cnt = cnt + 1;
-      navigator.geolocation.getCurrentPosition(pos, err);
+      const opt = {
+	  maximumAge: 0,
+	  enableHighAccuracy: true
+      };
+      navigator.geolocation.getCurrentPosition(pos, err, opt);
+      if (errorcnt > 0) {
+	  errorcnt = errorcnt - 1;
+	  if (errorcnt == 0)
+	      error = null
+      }
   }
 
   function recordtoggle(startp) {
@@ -80,7 +97,7 @@ layout: null
 	  name: 'geolocation'
       }).then(function(result) {
 	  if (result.state != 'granted')
-	      error = "This application requires geolocation permission to be set to granted.";
+	      seterror(5, "This application requires geolocation permission to be set to granted.");
 	  console.log('Permission: ' + result.state);
       });
   }
@@ -89,6 +106,7 @@ layout: null
       getpermission()
       drawpage()
   } else {
-      error = "This application doesn't work in this browser"
+      seterror(5, "This application doesn't work in this browser");
+      drawpage()
   }
 </script>
