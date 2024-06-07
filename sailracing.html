@@ -9,7 +9,7 @@ layout: null
   </head>
   <style>
   body {
-      font-size: 400%;
+      font-size: 200%;
       background-color: black;
       color: #fcdb03;
       margin:0;
@@ -17,29 +17,76 @@ layout: null
       width: 100%;
       height: 100%;
   }
+  .error {
+      color: #F00;
+  }
   </style>
   <body>
-    <a onclick="start()">Start</a>
+    <h1>Enable Javascript</h1>
   </body>
 </html>
 <script>
-  e = document.body;
+  var c = null;
+  var error = null;
+  var tracking = null;
 
   function pos(p) {
       c = p.coords;
-      e.innerHTML = 'Latitude, Longitude: ' + c.latitude + ', ' + c.longitude;
+      drawpage();
   }
 
   function err(ec) {
-      e.innerHTML = 'Error:' + ec;
+      error = ec;
+      drawpage();
   }
 
-  function start() {
-      if ("geolocation" in navigator) {
-      	  e.innerHTML = 'Geo Available '
-	        navigator.geolocation.getCurrentPosition(pos, err)
+  function updateposition() {
+      navigator.geolocation.getCurrentPosition(pos, err);
+  }
+
+  function recordtoggle(startp) {
+      if (tracking == null) {
+	  tracking = setInterval(updateposition, 1000);
+	  
       } else {
-      	  e.innerHTML = 'No Geo Available'
+	  clearInterval(tracking);
+	  tracking = null;
+	  c = null;
       }
+      drawpage();
+  }
+
+  function drawpage() {
+      var e = document.body;
+      var h = ""
+      if (tracking == null) {
+	  h += '<p><a onclick="recordtoggle();">Start</a></p>';
+      } else {
+	  h += '<p><a onclick="recordtoggle();">Finish</a></p>';
+      }
+      if (c != null) {
+	  h += '<p>Latitude, Longitude: ' + c.latitude + ', ' + c.longitude + '</p>';
+      }
+      if (error != null) {
+	  h += '<p class="error">' + error + '</p>';
+      }
+      e.innerHTML = h
+  }
+  
+  function getpermission() {
+      navigator.permissions.query({
+	  name: 'geolocation'
+      }).then(function(result) {
+	  if (result.state != 'granted')
+	      error = "This application requires geolocation permission to be set to granted.";
+	  console.log('Permission: ' + result.state);
+      });
+  }
+
+  if ("geolocation" in navigator && "permissions" in navigator) {
+      getpermission()
+      drawpage()
+  } else {
+      error = "This application doesn't work in this browser"
   }
 </script>
