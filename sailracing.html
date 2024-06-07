@@ -53,7 +53,8 @@ layout: null
   function updateposition() {
       const opt = {
 	  maximumAge: 0,
-	  enableHighAccuracy: true
+	  enableHighAccuracy: true,
+	  timeout: 1000
       };
       navigator.geolocation.getCurrentPosition(pos, err, opt);
       if (errorcnt > 0) {
