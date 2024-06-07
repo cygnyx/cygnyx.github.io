@@ -214,7 +214,7 @@ layout: null
 	  mm = parseInt(hhmm[1])
 	  if (sname.endsWith("PM")) hh += 12;
 	  dt.setHours(hh);
-	  dt.setMinutes(mm + lz);
+	  dt.setMinutes(mm - lz);
 	  dt.setSeconds(0);
 	  t = dt.getTime();
 	  break;
