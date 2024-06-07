@@ -46,7 +46,7 @@ layout: null
   }
 
   function err(ec) {
-      seterror(5, ec);
+      seterror(5, ec.message);
       drawpage();
   }
 
@@ -80,7 +80,7 @@ layout: null
       var e = document.body;
       var h = ""
       if (tracking == null) {
-	  h += '<p><a onclick="recordtoggle();">Start</a></p>';
+	  h += '<p><a onclick="recordtoggle();">Start ' + v + '</a></p>';
       } else {
 	  h += '<p><a onclick="recordtoggle();">Finish</a></p>';
       }
