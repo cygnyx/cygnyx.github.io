@@ -26,14 +26,18 @@ layout: null
   e = document.body;
 
   function pos(p) {
-      c = p.coords
-      e.innerHTML = 'Latitude, Longitude: ' + c.latitude + ', ' + c.longitude
+      c = p.coords;
+      e.innerHTML = 'Latitude, Longitude: ' + c.latitude + ', ' + c.longitude;
+  }
+
+  function err(ec) {
+      e.innerHTML = 'Error:' + ec;
   }
 
   function start() {
       if ("geolocation" in navigator) {
       	  e.innerHTML = 'Geo Available '
-	        navigator.geolocation.getCurrentPosition(pos)
+	        navigator.geolocation.getCurrentPosition(pos, err)
       } else {
       	  e.innerHTML = 'No Geo Available'
       }
