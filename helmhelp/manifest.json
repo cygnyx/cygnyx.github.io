@@ -1,0 +1,46 @@
+{
+  "name": "Helm Pal",
+  "short_name": "Helm Pal",
+  "other_names": "Skipassist Navassist SkipperPal RacePal RaceMate SailMate NavMate SkipMate SailAssist HelmPal",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Sail Racing helm help",
+  "icons": [
+    {
+      "src": "icon48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "icon48.png",
+      "sizes": "57x57",
+      "type": "image/png"
+    },
+    {
+      "src": "icon72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icon96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icon144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icon168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "icon192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
