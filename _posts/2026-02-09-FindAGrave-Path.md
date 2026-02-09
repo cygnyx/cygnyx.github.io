@@ -3,13 +3,12 @@ layout: post
 title:  "Path planning for FindAGrave"
 tags: Javascript
 ---
-Recently I had a number of memorials in [FindAGrave][FAG] to visit.
-I created a virtual cemetery for them and visited the page.
-I had about 50 memorials all in the same cemetery and all contained GPS locations.
+Recently I had about 50 memorials in [FindAGrave][FAG] to visit in a single cemetery with GPS locations.
+I needed a short, but not shortest, path to visit them.
+Here's a ChatGPT assisted, reasonable solution.
 
-Here is how I order the memorials to reduce the distances (with ChatGPT helping).
-
-First, I grabbed the memorial info from the virtual cemeter page I was visiting.
+First, created a virtual cemetery with the memorials.
+Visiting its page,
 I entered the following in the development console window.
 
 ```js
@@ -330,6 +329,8 @@ a.href = URL.createObjectURL(blob);
 a.download = 'virtual-cemetery-path.html';
 a.click();
 ```
+
+This will save me some time.
 
 [FAG]: https://www.findagrave.com
 [Opt2]: https://en.wikipedia.org/wiki/2-opt
